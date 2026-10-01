@@ -17,6 +17,7 @@ All tools are single HTML files that work entirely in your browser. No server, n
 | **Base64 Tool** | Encode and decode Base64 strings. Quick copy/paste interface. | [Live](https://k1r4.space/base64-tool.html) |
 | **QR Code Generator** | Generate QR codes for URLs, text, WiFi, and more. Download as PNG. | [Live](https://k1r4.space/qr-code-generator.html) |
 | **TaskFlow** | Complete task manager with priorities, due dates, drag-drop reordering, themes, and export/import. | [Live](https://k1r4.space/taskflow.html) |
+| **Password Generator** | Cryptographically secure password generator with strength meter, customizable length and character sets. | [Live](https://k1r4.space/password-generator.html) |
 
 ## 📖 About
 
@@ -75,6 +76,7 @@ k1r4-tools/
 ├── base64-tool.html           # Base64 encoder/decoder
 ├── qr-code-generator.html     # QR code generator
 ├── taskflow.html              # Task manager
+├── password-generator.html    # Cryptographically secure password generator
 ├── README.md
 └── *.png                      # Cover images
 ```
