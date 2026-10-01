@@ -15,6 +15,7 @@ All tools are single HTML files that work entirely in your browser. No server, n
 | **Regex Tester** | Test regular expressions in real-time. See matches and captured groups. | [Live](https://k1r4.space/regex-tester.html) |
 | **Markdown Editor** | Split-pane markdown editor with live preview. Drag & drop files, auto-save. | [Live](https://k1r4.space/markdown-editor.html) |
 | **QR Code Generator** | Generate QR codes for URLs, text, WiFi, and more. Download as PNG. | [Live](https://k1r4.space/qr-code-generator.html) |
+| **TaskFlow** | Complete task manager with priorities, due dates, drag-drop reordering, themes, and export/import. | [Live](https://k1r4.space/taskflow.html) |
 
 ## 📖 About
 
@@ -54,6 +55,9 @@ A split-pane markdown editor with live preview. Supports drag-and-drop `.md` fil
 ### QR Code Generator
 Generate QR codes for URLs, text, and WiFi credentials. Supports error correction levels, color customization, and download as PNG.
 
+### TaskFlow
+A complete task management app with priority levels, due dates, drag-and-drop reordering, dark/light themes, statistics dashboard, and JSON export/import. Your privacy-focused Todoist alternative.
+
 ## 📁 Structure
 
 ```
@@ -65,6 +69,7 @@ k1r4-tools/
 ├── regex-tester.html          # Regex tester
 ├── markdown-editor.html       # Markdown editor
 ├── qr-code-generator.html     # QR code generator
+├── taskflow.html              # Task manager
 ├── README.md
 └── *.png                      # Cover images
 ```
