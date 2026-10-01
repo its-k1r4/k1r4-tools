@@ -14,6 +14,7 @@ All tools are single HTML files that work entirely in your browser. No server, n
 | **JSON Formatter** | Format, validate, and minify JSON. Syntax highlighting. | [Live](https://k1r4.space/json-formatter.html) |
 | **Regex Tester** | Test regular expressions in real-time. See matches and captured groups. | [Live](https://k1r4.space/regex-tester.html) |
 | **Markdown Editor** | Split-pane markdown editor with live preview. Drag & drop files, auto-save. | [Live](https://k1r4.space/markdown-editor.html) |
+| **QR Code Generator** | Generate QR codes for URLs, text, WiFi, and more. Download as PNG. | [Live](https://k1r4.space/qr-code-generator.html) |
 
 ## 📖 About
 
@@ -50,6 +51,9 @@ Test regular expressions in real-time. See matches highlighted, view captured gr
 ### Markdown Editor
 A split-pane markdown editor with live preview. Supports drag-and-drop `.md` files, auto-save to `localStorage`, download as `.md`, and copy HTML output.
 
+### QR Code Generator
+Generate QR codes for URLs, text, and WiFi credentials. Supports error correction levels, color customization, and download as PNG.
+
 ## 📁 Structure
 
 ```
@@ -60,6 +64,7 @@ k1r4-tools/
 ├── json-formatter.html        # JSON formatter
 ├── regex-tester.html          # Regex tester
 ├── markdown-editor.html       # Markdown editor
+├── qr-code-generator.html     # QR code generator
 ├── README.md
 └── *.png                      # Cover images
 ```
