@@ -14,6 +14,7 @@ All tools are single HTML files that work entirely in your browser. No server, n
 | **JSON Formatter** | Format, validate, and minify JSON. Syntax highlighting. | [Live](https://k1r4.space/json-formatter.html) |
 | **Regex Tester** | Test regular expressions in real-time. See matches and captured groups. | [Live](https://k1r4.space/regex-tester.html) |
 | **Markdown Editor** | Split-pane markdown editor with live preview. Drag & drop files, auto-save. | [Live](https://k1r4.space/markdown-editor.html) |
+| **Base64 Tool** | Encode and decode Base64 strings. Quick copy/paste interface. | [Live](https://k1r4.space/base64-tool.html) |
 | **QR Code Generator** | Generate QR codes for URLs, text, WiFi, and more. Download as PNG. | [Live](https://k1r4.space/qr-code-generator.html) |
 | **TaskFlow** | Complete task manager with priorities, due dates, drag-drop reordering, themes, and export/import. | [Live](https://k1r4.space/taskflow.html) |
 
@@ -52,6 +53,9 @@ Test regular expressions in real-time. See matches highlighted, view captured gr
 ### Markdown Editor
 A split-pane markdown editor with live preview. Supports drag-and-drop `.md` files, auto-save to `localStorage`, download as `.md`, and copy HTML output.
 
+### Base64 Tool
+Quick Base64 encoding and decoding for text strings. Supports both encode and decode operations with one-click copy.
+
 ### QR Code Generator
 Generate QR codes for URLs, text, and WiFi credentials. Supports error correction levels, color customization, and download as PNG.
 
@@ -68,6 +72,7 @@ k1r4-tools/
 ├── json-formatter.html        # JSON formatter
 ├── regex-tester.html          # Regex tester
 ├── markdown-editor.html       # Markdown editor
+├── base64-tool.html           # Base64 encoder/decoder
 ├── qr-code-generator.html     # QR code generator
 ├── taskflow.html              # Task manager
 ├── README.md
