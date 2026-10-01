@@ -18,6 +18,7 @@ All tools are single HTML files that work entirely in your browser. No server, n
 | **QR Code Generator** | Generate QR codes for URLs, text, WiFi, and more. Download as PNG. | [Live](https://k1r4.space/qr-code-generator.html) |
 | **TaskFlow** | Complete task manager with priorities, due dates, drag-drop reordering, themes, and export/import. | [Live](https://k1r4.space/taskflow.html) |
 | **Password Generator** | Cryptographically secure password generator with strength meter, customizable length and character sets. | [Live](https://k1r4.space/password-generator.html) |
+| **CSV to JSON Converter** | Convert CSV data to JSON with auto-detect delimiter, number/boolean parsing, and file export. | [Live](https://k1r4.space/csv-converter.html) |
 
 ## 📖 About
 
@@ -63,6 +64,9 @@ Generate QR codes for URLs, text, and WiFi credentials. Supports error correctio
 ### TaskFlow
 A complete task management app with priority levels, due dates, drag-and-drop reordering, dark/light themes, statistics dashboard, and JSON export/import. Your privacy-focused Todoist alternative.
 
+### CSV to JSON Converter
+Convert CSV data to JSON format instantly. Auto-detects delimiters, parses numbers and booleans, and exports to file. No uploads, no server, no limits.
+
 ## 📁 Structure
 
 ```
@@ -77,6 +81,7 @@ k1r4-tools/
 ├── qr-code-generator.html     # QR code generator
 ├── taskflow.html              # Task manager
 ├── password-generator.html    # Cryptographically secure password generator
+├── csv-converter.html         # CSV to JSON converter
 ├── README.md
 └── *.png                      # Cover images
 ```
