@@ -19,6 +19,7 @@ All tools are single HTML files that work entirely in your browser. No server, n
 | **TaskFlow** | Complete task manager with priorities, due dates, drag-drop reordering, themes, and export/import. | [Live](https://k1r4.space/taskflow.html) |
 | **Password Generator** | Cryptographically secure password generator with strength meter, customizable length and character sets. | [Live](https://k1r4.space/password-generator.html) |
 | **CSV to JSON Converter** | Convert CSV data to JSON with auto-detect delimiter, number/boolean parsing, and file export. | [Live](https://k1r4.space/csv-converter.html) |
+| **Markdown Note-Taker** | Full-featured markdown note-taking app with live preview, note organization, search, and export. All data stored locally. | [Live](https://k1r4.space/note-taker.html) |
 
 ## 📖 About
 
@@ -67,6 +68,9 @@ A complete task management app with priority levels, due dates, drag-and-drop re
 ### CSV to JSON Converter
 Convert CSV data to JSON format instantly. Auto-detects delimiters, parses numbers and booleans, and exports to file. No uploads, no server, no limits.
 
+### Markdown Note-Taker
+A full-featured markdown note-taking app with split-pane editing, live preview, note organization, search, keyboard shortcuts, and export to markdown files. All notes persist in your browser's localStorage. Targets "markdown notes online" and "browser note taking" search queries.
+
 ## 📁 Structure
 
 ```
@@ -82,6 +86,7 @@ k1r4-tools/
 ├── taskflow.html              # Task manager
 ├── password-generator.html    # Cryptographically secure password generator
 ├── csv-converter.html         # CSV to JSON converter
+├── note-taker.html            # Markdown note-taking app
 ├── README.md
 └── *.png                      # Cover images
 ```
