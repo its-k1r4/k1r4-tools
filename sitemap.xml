@@ -7,14 +7,8 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://k1r4.space/kanban-board.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://k1r4.space/pomodoro-timer.html</loc>
-    <lastmod>2026-09-26</lastmod>
+    <loc>https://k1r4.space/base64-tool.html</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -25,14 +19,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://k1r4.space/csv-converter.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://k1r4.space/dev-dashboard.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://k1r4.space/json-formatter.html</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://k1r4.space/regex-tester.html</loc>
-    <lastmod>2026-09-28</lastmod>
+    <loc>https://k1r4.space/kanban-board.html</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -43,20 +49,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://k1r4.space/base64-tool.html</loc>
-    <lastmod>2026-09-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://k1r4.space/qr-code-generator.html</loc>
-    <lastmod>2026-09-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://k1r4.space/taskflow.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <loc>https://k1r4.space/note-taker.html</loc>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -67,9 +61,51 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://k1r4.space/status.html</loc>
+    <loc>https://k1r4.space/pomodoro-timer.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://k1r4.space/qr-code-generator.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://k1r4.space/regex-tester.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://k1r4.space/taskflow.html</loc>
     <lastmod>2026-10-01</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://k1r4.space/tutorials/kanban-board-tutorial.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://k1r4.space/tutorials/css-gradient-generator-tutorial.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://k1r4.space/tutorials/json-formatter-tutorial.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://k1r4.space/tutorials/regex-tester-tutorial.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
