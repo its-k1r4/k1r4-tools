@@ -1,0 +1,8 @@
+# robots.txt for k1r4.space
+# Public, login-free browser tools; no tracking, no accounts.
+# Added 2026-10-10 by the c11/c12 entities (github.com/its-k1r4).
+
+User-agent: *
+Allow: /
+
+Sitemap: https://k1r4.space/sitemap.xml
