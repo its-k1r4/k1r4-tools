@@ -203,17 +203,20 @@ function parseCSV(text, delimiter) {
     const values = parseLine(lines[i], delimiter);
     const obj = {};
     headers.forEach((h, idx) => {
-      let val = idx < values ? values[idx] : '';
+      let val = idx < values.length ? values[idx] : '';
       if (document.getElementById('trimSpaces').checked) val = val.trim();
+      // The three options are independent, each claiming only what it can recognise. They
+      // used to be one if/else chain, so with the defaults (both type options on) numbers
+      // answered first and "Parse booleans" never ran: a true/false column came back as the
+      // strings "true"/"false" (found 2026-10-11 by running it).
+      const t = val.trim();
       if (val === '' && document.getElementById('emptyAsNull').checked) {
         obj[h] = null;
-      } else if (document.getElementById('parseNumbers').checked) {
-        if (val !== '' && !isNaN(val) && val !== '') obj[h] = Number(val);
-        else obj[h] = val;
-      } else if (document.getElementById('parseBooleans').checked) {
-        if (val.toLowerCase() === 'true') obj[h] = true;
-        else if (val.toLowerCase() === 'false') obj[h] = false;
-        else obj[h] = val;
+      } else if (document.getElementById('parseNumbers').checked && t !== '' && !isNaN(t)) {
+        obj[h] = Number(t);
+      } else if (document.getElementById('parseBooleans').checked
+                 && (val.toLowerCase() === 'true' || val.toLowerCase() === 'false')) {
+        obj[h] = val.toLowerCase() === 'true';
       } else {
         obj[h] = val;
       }

@@ -277,9 +277,14 @@ function parseMarkdown(text) {
   // Escape HTML (but preserve our markdown)
   html = html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-  // Code blocks (fenced)
+  // Code blocks (fenced). Their contents are literal, so they are lifted out into
+  // placeholders and put back just before the paragraph pass: otherwise every rule below
+  // runs straight through the code and rewrites it (found 2026-10-11 by running it:
+  // "```\n**x**\n```" came back as <strong>x</strong> inside the <pre>).
+  const blocks = [];
+  const stash = (kind, built) => { blocks.push([kind, built]); return '\u0000' + kind + (blocks.length - 1) + '\u0000'; };
   html = html.replace(/```(\w*)\n([\s\S]*?)```/g, function(match, lang, code) {
-    return '<pre><code class="language-' + lang + '">' + code.trim() + '</code></pre>';
+    return stash('CODE', '<pre><code class="language-' + lang + '">' + code.trim() + '</code></pre>');
   });
 
   // Inline code
@@ -319,12 +324,26 @@ function parseMarkdown(text) {
   // Links
   html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
 
+  // Lists. Ordered first, each wrapped in its own tag. The <ul> rule below matches any run
+  // of <li>, so an ordered list converted before it would be swallowed into a <ul>; and
+  // converted after it, as this used to be, a numbered list came out as bare <li> with no
+  // list around it at all (found 2026-10-11).
+  // The ordered list is stashed too: the <ul> wrapping below matches any run of <li>, so an
+  // <ol> left in the text would come back as <ol><ul><li>…</li></ul></ol>.
+  html = html.replace(/(?:^[\s]*\d+\. .*(?:\n|$))+/gm, function(block) {
+    return stash('LIST', '<ol>\n' + block.replace(/^[\s]*\d+\. (.*)$/gm, '<li>$1</li>').replace(/\n+$/, '') + '\n</ol>\n');
+  });
+
   // Unordered lists
   html = html.replace(/^[\s]*[-*+] (.+)$/gm, '<li>$1</li>');
   html = html.replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>');
 
-  // Ordered lists
-  html = html.replace(/^[\s]*\d+\. (.+)$/gm, '<li>$1</li>');
+  // Put the stashed blocks back now the inline rules have run, so the paragraph pass sees
+  // them as blocks.
+  html = html.replace(/\u0000(CODE|LIST)(\d+)\u0000/g, function(m, kind, i) {
+    const b = blocks[+i];
+    return b && b[0] === kind ? b[1] : m;
+  });
 
   // Paragraphs — replace double newlines
   html = html.replace(/\n{2,}/g, '</p>\n\n<p>');
