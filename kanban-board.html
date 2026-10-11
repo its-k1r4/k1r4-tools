@@ -226,17 +226,20 @@
 
         function handleDragEnter(e) {
             e.preventDefault();
-            const list = e.currentTarget;
+            const list = e.currentTarget;      // the .card-list itself
+            // dragenter bubbles from the cards inside it: ignore moves within the list
+            if (e.relatedTarget && list.contains(e.relatedTarget)) return;
+            if (list.querySelector('.drop-indicator')) return;
             const indicator = document.createElement('div');
             indicator.className = 'drop-indicator';
             indicator.id = 'dropIndicator';
-            const cardList = list.querySelector('.card-list');
-            if (!cardList.contains(indicator)) {
-                cardList.appendChild(indicator);
-            }
+            list.appendChild(indicator);
         }
 
         function handleDragLeave(e) {
+            const list = e.currentTarget;
+            // leaving for a child of the same list is not leaving the list
+            if (e.relatedTarget && list.contains(e.relatedTarget)) return;
             const indicator = document.getElementById('dropIndicator');
             if (indicator) indicator.remove();
         }
